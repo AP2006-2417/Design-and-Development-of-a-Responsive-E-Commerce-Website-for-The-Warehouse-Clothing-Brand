@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.category-card {
+    @apply rounded-xl p-6 flex flex-col items-center justify-center gap-3 transition cursor-pointer;
+}
+
+.category-card i {
+    @apply text-gray-700;
+}
+
+.category-card span {
+    @apply font-medium text-gray-700;
+}
+
+.size-btn {
+    @apply transition;
+}
+
+.color-btn {
+    @apply transition;
+}
+
+.pagination-btn {
+    @apply transition;
+}
+
+/* Product card styles (will be used in the web component) */
+.product-card {
+    @apply bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition relative;
+}
+
+.product-card .new-badge {
+    @apply absolute top-2 right-2 bg-purple-600 text-white text-xs px-2 py-1 rounded;
+}
+
+.product-card .product-image {
+    @apply w-full h-64 object-cover;
+}
+
+.product-card .product-info {
+    @apply p-4;
+}
+
+.product-card .product-name {
+    @apply font-semibold text-gray-800 mb-1;
+}
+
+.product-card .product-price {
+    @apply text-gray-600 mb-3;
+}
+
+.product-card .add-to-cart {
+    @apply w-full bg-purple-600 text-white py-2 rounded-lg hover:bg-purple-700 transition;
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+    .product-card .product-image {
+        @apply h-48;
+    }
+}
